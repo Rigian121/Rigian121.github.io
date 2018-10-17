@@ -7,5 +7,4 @@ function setup(){
     textSize(20);
     text("Halló heimur",100,40);
     rect(30,20,55,55);
-    ellise(100,200,50,50);
 }
