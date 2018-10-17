@@ -6,6 +6,6 @@ function setup(){
     fill(0);
     textSize(20);
     text("Halló heimur",100,40);
-    rect(200,200,10,10)
+    rect(200,200,10,10);
     ellise(100,200,50,50);
 }
