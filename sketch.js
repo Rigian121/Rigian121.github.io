@@ -7,4 +7,3 @@ function setup(){
     textSize(20);
     text("Halló heimur",200,40);
 }
-<p>Bagels are our new god.<p>
