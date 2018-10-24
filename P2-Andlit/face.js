@@ -11,7 +11,7 @@ function setup(){
 }
 
 function draw(){
-  background(180);
+  background(255);
   ellipse(x, y, faceWidth, faceHeight);
   ellipse(eyex, eyey, eyeSize, eyeSize)
   ellipse(eyex+40, eyey, eyeSize, eyeSize)
