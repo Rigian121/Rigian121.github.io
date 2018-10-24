@@ -1,8 +1,10 @@
-var eyeSize = 20;
 var faceWidth = 100;
 var faceHeight = 150;
 var x = 150;
 var y = 150;
+var eyeSize = 20;
+var eyex = 150;
+var eyey = 150;
 
 function setup(){
   createCanvas (300,300);
@@ -11,14 +13,17 @@ function setup(){
 function draw(){
   background(180);
   ellipse(x, y, faceWidth, faceHeight);
-
-  //.....kóði sem staðsetur augun m.v. x, y, faceWidth og faceHeight ætti að koma hér.
+  ellipse(eyex, eyey, eyeSize, eyeSize)
+  ellipse(eyex+10, eyey+10, eyeSize, eyeSize)
+  //.....kï¿½ï¿½i sem staï¿½setur augun m.v. x, y, faceWidth og faceHeight ï¿½tti aï¿½ koma hï¿½r.
 
 }
 
 function mousePressed(){
-  //Í hvert sinn sem músinni er smellt fá breyturnar ný gildi.
+  //ï¿½ hvert sinn sem mï¿½sinni er smellt fï¿½ breyturnar nï¿½ gildi.
   faceWidth  = random(75,  150);
   faceHeight = random(100, 200);
   eyeSize    = random(10,  30);
+  eyex       = random(140,  160);
+  eyey       = random(10,  160);
 }
