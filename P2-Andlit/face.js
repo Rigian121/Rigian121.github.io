@@ -14,7 +14,7 @@ function draw(){
   background(180);
   ellipse(x, y, faceWidth, faceHeight);
   ellipse(eyex, eyey, eyeSize, eyeSize)
-  ellipse(eyex+10, eyey+10, eyeSize, eyeSize)
+  ellipse(eyex+40, eyey, eyeSize, eyeSize)
   //.....k��i sem sta�setur augun m.v. x, y, faceWidth og faceHeight �tti a� koma h�r.
 
 }
