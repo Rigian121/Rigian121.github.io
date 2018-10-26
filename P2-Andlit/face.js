@@ -16,12 +16,15 @@ function setup(){
 
 function draw(){
   background(180);
-  fill(facecolourb, facecolourg, facecolourr);
+  fill(facecolourr, facecolourg, facecolourb);
   ellipse(x, y, faceWidth, faceHeight);
   fill(255)
   ellipse(eyex, eyey, eyeSize, eyeSize)
   ellipse(eyex+eyedist, eyey, eyeSize, eyeSize)
-  ellipse(x, y+40, faceWidth-50, faceHeight-130)
+  fill(30)
+  ellipse(eyex+eyedist, eyey, eyeSize-5, eyeSize-5)
+  ellipse(eyex, eyey, eyeSize-5, eyeSize-5)
+  ellipse(eyex+20, y+30, faceWidth-70, faceHeight-150)
 
   //.....k��i sem sta�setur augun m.v. x, y, faceWidth og faceHeight �tti a� koma h�r.
 
@@ -31,11 +34,11 @@ function mousePressed(){
   //� hvert sinn sem m�sinni er smellt f� breyturnar n� gildi.
   faceWidth  = random(75,  150);
   faceHeight = random(100, 200);
-  eyeSize    = random(10,  30);
-  eyex       = random(130, 160);
-  eyey       = random(145, 155);
+  eyeSize    = random(5,  30);
+  eyex       = random(100, 160);
+  eyey       = random(125, 145);
   eyedist    = random(20, 40)
-  facecolourb = random(50, 140)
-  facecolourg = random(90, 210)
-  facecolourr = random(100, 255)
+  facecolourb = random(70, facecolourr-70)
+  facecolourg = random(90, facecolourr-50)
+  facecolourr = random(150, 200)
 }
