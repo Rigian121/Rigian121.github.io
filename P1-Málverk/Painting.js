@@ -1,44 +1,23 @@
-var faceWidth = 100;
-var faceHeight = 150;
-var x = 150;
-var y = 150;
-var eyeSize = 20;
-var eyex = 150;
-var eyey = 150;
-var eyedist = 40
-var facecolourb = 170
-var facecolourg = 212
-var facecolourr = 255
-
 function setup(){
   createCanvas (300,300);
 }
 
 function draw(){
-  background(180);
-  fill(facecolourr, facecolourg, facecolourb);
-  ellipse(x, y, faceWidth, faceHeight);
-  fill(255)
-  ellipse(eyex, eyey, eyeSize, eyeSize)
-  ellipse(eyex+eyedist, eyey, eyeSize, eyeSize)
-  fill(30)
-  ellipse(eyex+eyedist, eyey, eyeSize-5, eyeSize-5)
-  ellipse(eyex, eyey, eyeSize-5, eyeSize-5)
-  ellipse(eyex+20, y+30, faceWidth-70, faceHeight-130)
+  background(236, 237, 232);
+  fill(27);
+  rect(120, 0, 6, 300)
+  rect(0, 160, 300, 6)
+  rect(120, 283, 150, 6)
+  rect(195, 288, 75, 30)
+  rect(270, 160, 6, 150)
+  rect(270, 215, 30, 8)
+  fill(28, 70, 142)
+  rect(276, 166, 24, 48)
+  fill(249, 215, 59)
+  rect(126, 288, 75, 30)
+  fill(198, 50, 38)
+  rect(0, 0, 120, 160)
 
   //.....k��i sem sta�setur augun m.v. x, y, faceWidth og faceHeight �tti a� koma h�r.
 
-}
-
-function mousePressed(){
-  //� hvert sinn sem m�sinni er smellt f� breyturnar n� gildi.
-  faceWidth  = random(75,  150);
-  faceHeight = random(100, 200);
-  eyeSize    = random(5,  30);
-  eyex       = random(100, 160);
-  eyey       = random(125, 145);
-  eyedist    = random(20, 40)
-  facecolourb = random(70, facecolourr-70)
-  facecolourg = random(90, facecolourr-50)
-  facecolourr = random(150, 200)
 }
