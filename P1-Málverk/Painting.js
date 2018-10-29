@@ -16,7 +16,7 @@ function draw(){
   fill(249, 215, 59)
   rect(126, 288, 75, 30)
   fill(198, 50, 38)
-  rect(0, 0, 120, 160)
+  rect(0, 0, 120, 160);
 
   //.....k��i sem sta�setur augun m.v. x, y, faceWidth og faceHeight �tti a� koma h�r.
 
