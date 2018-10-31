@@ -37,7 +37,7 @@ function mousePressed(){
   eyeSize    = random(5,  30);
   eyex       = random(100, 160);
   eyey       = random(125, 145);
-  eyedist    = random(20, 40)
+  eyedist    = random(30, 50)
   facecolourb = random(70, facecolourr-70)
   facecolourg = random(90, facecolourr-50)
   facecolourr = random(150, 200)
