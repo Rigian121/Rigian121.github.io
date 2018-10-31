@@ -1,15 +1,16 @@
 function setup() {
   createCanvas(300,300);
-  background(255, 215, 0);
+  background(0);
   fill(0);
-  frameRate(2);
+  frameRate(10);
 }
 
 function draw(){
-  for(var i = 10; i < 15; i = i + 1) {
-    fill(random(0, 360), 75,100);
-    ellipse(10, 10 + i*20, 7, 7);
-  for(var o = 0; o < random(0, 30); o = o + 1)
-    ellipse(10 + o*20, 10 + i*20, 7, 7);
+background(0);
+    for(var f = 0; f < 14; f = f + 1) {
+      fill(0, 210, 30);
+      rect(10, 10 + f*20, 15, 15);
+    for(var g = 0; g < random(0, 20); g = g + 1)
+      rect(10 + g*20, 10 + f*20, 15, 15);
   }
 }
