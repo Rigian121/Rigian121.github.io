@@ -7,17 +7,13 @@ owl = loadImage('assets/owl.png')
 }
 
 function setup() {
-  createCanvas(600,300);
+  createCanvas(600,600);
   background(255,200,0);
 }
 
 function draw(){
-background(255,200,0);
+background(0);
   imageMode(CENTER)
-  if(mouseX < 300){
-    image(owl, mouseX, mouseY)
-  }
-  if(mouseX > 300){
-    image(sloth, mouseX, mouseY)
-  }
+  fill(200)
+  rect(mouseX, 30, 100, 20)
 }
