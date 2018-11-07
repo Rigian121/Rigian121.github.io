@@ -9,6 +9,7 @@ owl = loadImage('assets/owl.png')
 function setup() {
   createCanvas(600,300);
   background(255,200,0);
+  imameMode(CENTER)
 }
 
 function draw(){
