@@ -3,7 +3,7 @@ var owl;
 
 function preload() {
 sloth = loadImage('assets/sloth.png')
-owl = loadImage('assets/owl.png') //Báðar myndir úr https://opengameart.org/content/animal-pack-redux
+owl = loadImage('assets/owl.png')
 }
 
 function setup() {
