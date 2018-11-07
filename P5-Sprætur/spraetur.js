@@ -12,7 +12,7 @@ function setup() {
 }
 
 function draw(){
-background(0);
+background(255,200,0);
   imageMode(CENTER)
   if(mouseX < 300){
     image(owl, mouseX, mouseY)
