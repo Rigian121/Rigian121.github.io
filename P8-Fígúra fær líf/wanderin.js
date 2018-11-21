@@ -1,23 +1,62 @@
+var buggie1, buggie2, buggie3
+
 function setup() {
   createCanvas(300,300);
-  frameRate(2)
+  frameRate(30)
+  buggie1 = new buggie(80, 80, 10, 20, 80, 1, 1, 2)
+  buggie2 = new buggie(200, 200, random(3, 20), random(5, 30), random(0, 255), 2, 2, 3)
+  buggie3 = new buggie(60, 250, 5, 20, 150, 3, 3, 5)
 }
 function draw() {
-  background(255);
-  Buggie(80, 80, 50, 70, 80)
-  Buggie(200, 200, random(10, 50), random(50, 80), random(0, 255))
+  background(170);
+  buggie1.show();
+  buggie1.move();
+  buggie2.show();
+  buggie2.move();
+  buggie3.show();
+  buggie3.move();
 }
 
-function Buggie(x,y, bodyWidth, bodyLength, bodyShade){
-  fill(bodyShade)
-  ellipse(x, y, bodyWidth, bodyLength)
-  ellipse(x, y-bodyLength/2, bodyWidth/1.5, bodyWidth/1.5)
-  line(x+bodyWidth/2, y, x+bodyWidth, y-bodyWidth/4)
-  line(x+bodyWidth, y-bodyWidth/4, x+bodyWidth*1.5, y-bodyWidth)
-  line(x-bodyWidth/2, y, x-bodyWidth, y-bodyWidth/4)
-  line(x-bodyWidth, y-bodyWidth/4, x-bodyWidth*1.5, y-bodyWidth)
-  line(x+bodyWidth/2.35, y+bodyLength/4, x+bodyWidth, y+bodyWidth/2)
-  line(x+bodyWidth, y+bodyWidth/2, x+bodyWidth*1.5, y+bodyWidth)
-  line(x-bodyWidth/2.35, y+bodyLength/4, x-bodyWidth, y+bodyWidth/2)
-  line(x-bodyWidth, y+bodyWidth/2, x-bodyWidth*1.5, y+bodyWidth)
+class buggie{
+ constructor(x,y, bodyWidth, bodyLength, bodyShade, xSpeed, ySpeed, skitter){
+  this.x = x;
+  this.y = y;
+  this.bodyWidth = bodyWidth
+  this.bodyLength = bodyLength
+  this.bodyShade = bodyShade
+  this.xSpeed = xSpeed
+  this.ySpeed = ySpeed
+  this.skitter = skitter
+}
+
+ show(){
+  fill(this.bodyShade)
+  ellipse(this.x, this.y, this.bodyWidth, this.bodyLength)
+  ellipse(this.x, this.y-this.bodyLength/2, this.bodyWidth/1.5, this.bodyWidth/1.5)
+  line(this.x+this.bodyWidth/2, this.y, this.x+this.bodyWidth, this.y-this.bodyWidth/4)
+  line(this.x+this.bodyWidth, this.y-this.bodyWidth/4, this.x+this.bodyWidth*1.5, this.y-this.bodyWidth)
+  line(this.x-this.bodyWidth/2, this.y, this.x-this.bodyWidth, this.y-this.bodyWidth/4)
+  line(this.x-this.bodyWidth, this.y-this.bodyWidth/4, this.x-this.bodyWidth*1.5, this.y-this.bodyWidth)
+  line(this.x+this.bodyWidth/2.35, this.y+this.bodyLength/4, this.x+this.bodyWidth, this.y+this.bodyWidth/2)
+  line(this.x+this.bodyWidth, this.y+this.bodyWidth/2, this.x+this.bodyWidth*1.5, this.y+this.bodyWidth)
+  line(this.x-this.bodyWidth/2.35, this.y+this.bodyLength/4, this.x-this.bodyWidth, this.y+this.bodyWidth/2)
+  line(this.x-this.bodyWidth, this.y+this.bodyWidth/2, this.x-this.bodyWidth*1.5, this.y+this.bodyWidth)
+  }
+
+  move(){
+    if((this.x < 280) && (this.x > 20) && (this.y < 280) && (this.y > 20)){
+    this.x = this.x + this.xSpeed + random (-this.skitter, this.skitter);
+  	this.y = this.y + this.ySpeed + random (-this.skitter, this.skitter);
+  }
+  else{
+    this.x = this.x + this.xSpeed;
+    this.y = this.y + this.ySpeed;
+  }
+    if ((this.x > 290) || (this.x < 10) || (this.unpredictability > 99)) {
+      this.xSpeed = this.xSpeed * -1;
+    }
+    if ((this.y > 290) || (this.y < 10) || (this.unpredictability > 99)) {
+      this.ySpeed = this.ySpeed * -1;
+    }
+  }
 }
