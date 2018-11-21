@@ -9,7 +9,8 @@ function setup() {
 }
 function draw() {
   background(170);
-  rect(20, 20, 260, 260)
+  noStroke();
+    rect(20, 20, 260, 260);
   buggie1.show();
   buggie1.move();
   buggie2.show();
@@ -32,6 +33,7 @@ class buggie{
 
  show(){
   fill(this.bodyShade)
+  stroke(0);
   ellipse(this.x, this.y, this.bodyWidth, this.bodyLength)
   ellipse(this.x, this.y-this.bodyLength/2, this.bodyWidth/1.5, this.bodyWidth/1.5)
   line(this.x+this.bodyWidth/2, this.y, this.x+this.bodyWidth, this.y-this.bodyWidth/4)
