@@ -3,9 +3,9 @@ var buggie1, buggie2, buggie3
 function setup() {
   createCanvas(300,300);
   frameRate(30)
-  buggie1 = new buggie(80, 80, 10, 20, 80, 1, 1, 2)
-  buggie2 = new buggie(200, 200, random(3, 20), random(5, 30), random(0, 255), 2, 2, 3)
-  buggie3 = new buggie(60, 250, 5, 20, 150, 3, 3, 5)
+  buggie1 = new buggie(80, 80, 10, 20, 1, 1, 2, 80)
+  buggie2 = new buggie(200, 200, random(3, 20), random(5, 30), 2, 2, 3, random(0, 255))
+  buggie3 = new buggie(60, 250, 5, 20, 3, 3, 5, 150)
 }
 function draw() {
   background(170);
@@ -18,7 +18,7 @@ function draw() {
 }
 
 class buggie{
- constructor(x,y, bodyWidth, bodyLength, bodyShade, xSpeed, ySpeed, skitter){
+ constructor(x,y, bodyWidth, bodyLength, xSpeed, ySpeed, skitter, bodyShade){
   this.x = x;
   this.y = y;
   this.bodyWidth = bodyWidth
