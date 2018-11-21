@@ -9,6 +9,7 @@ function setup() {
 }
 function draw() {
   background(170);
+  rect(20, 20, 260, 260)
   buggie1.show();
   buggie1.move();
   buggie2.show();
